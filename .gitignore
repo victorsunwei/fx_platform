@@ -1,0 +1,11 @@
+[project]
+name = "fx_platform"
+version = "0.1.0"
+description = "FX Derivatives Analytics Platform - V0.1 Kernel Baseline"
+requires-python = ">=3.10"
+
+[project.dependencies]
+pytest = "^8.0.0"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
