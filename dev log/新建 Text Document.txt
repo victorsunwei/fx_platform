@@ -1,0 +1,111 @@
+今日目标（Today Goal）
+在个人电脑上重新建立一个干净、可追溯、可测试的 FX 平台仓库骨架，并成功运行 pytest，完成 V0.1 Day 1 的全部验收标准。
+
+🧩 完成任务（Tasks Done）
+1. 创建项目目录结构
+建立了 V0.1 要求的基础目录：
+
+Code
+fx_platform/
+  configs/
+  docs/
+  migrations/
+  src/
+  tests/
+  README.md
+  .gitignore
+  pyproject.toml
+2. 创建基础文件
+README.md：初始化项目说明
+
+.gitignore：忽略缓存、虚拟环境、编辑器文件
+
+pyproject.toml：定义 Python 项目与 pytest 配置
+
+src/fx_platform/__init__.py：初始化 Python 包
+
+tests/test_sanity.py：最小测试文件（验证环境）
+
+3. 安装并验证 Python 环境
+成功安装 pytest
+
+成功运行 pytest（见测试结果）
+
+4. 初始化 Git 仓库
+执行 git init
+
+设置 Git 用户名与邮箱
+
+添加所有文件：git add .
+
+完成第一次提交：
+
+Code
+git commit -m "Day 1: initialize project structure"
+🧪 测试结果（Tests Run）
+运行命令：
+
+Code
+pytest
+输出：
+
+Code
+============================= 1 passed in 0.02s =============================
+说明：
+
+pytest 工作正常
+
+项目结构正确
+
+Python 包路径正确
+
+Day 1 验收标准完全通过
+
+🐞 遇到的问题与修复（Issues & Fixes）
+问题 1：Git 未安装
+运行 git init 时出现 'git' 不是内部或外部命令
+
+修复： 安装 Git for Windows → 成功识别 git 命令
+
+问题 2：Git 未设置用户身份
+出现 Author identity unknown
+
+修复：
+
+Code
+git config --global user.name "Sun"
+git config --global user.email "sun@example.com"
+问题 3：文件路径错误
+错误文件名：
+
+Code
+srcfx_platform__init__.py
+teststest_sanity.py
+修复：
+
+正确结构：
+
+Code
+src/fx_platform/__init__.py
+tests/test_sanity.py
+⚠ 风险更新（Risk Update）
+R13 — 个人时间不足
+今日完成一个完整的 Day 1 小任务，节奏可控，风险降低。
+
+R02 — Kernel 过度设计
+今日仅完成最小骨架，没有提前设计未来模块，风险降低。
+
+R01 — 范围膨胀
+严格遵守 V0.1 Day 1 范围，没有加入任何非范围内容，风险降低。
+
+➡ 下一步（Next Step）
+进入 Day 2：领域契约（Contracts）  
+目标：
+
+创建 CurrencyPair, MarketQuote, ForwardInput, ForwardResult
+
+编写验证规则
+
+编写对应测试
+
+运行 pytest 确认通过
